@@ -42,18 +42,19 @@ def substituicao3 (frase, original, substituta):
 
 
 def produtos4():
-    tupla = []
+    tupla = ()
     for n in range(5):
         produto = input("Digite o nome do produto: ")
         quantidade = int(input("Digite a quantidade do produto: "))
         preco = float(input("Digite o preço do produto: "))
-        tupla.append((produto, quantidade, preco))
+        tupla += ((produto, quantidade, preco),)
+        print (tupla)
     
   
-    menos50 = []
+    menos50 = ()
     for produto, quantidade, preco in tupla:
         if quantidade < 50:
-            menos50.append((produto, quantidade))
+            menos50 += (produto,)
     
     if menos50:
         print(f"Produtos com menos de 50 unidades: {menos50}")
@@ -67,6 +68,6 @@ def produtos4():
     
     print(f"O produto mais caro é o {produtomaiscaro}, e ele custa {precomaiscaro:.2f} reais")
     
-    return tuple(tupla)
+    return tupla
 
 produtos4()
