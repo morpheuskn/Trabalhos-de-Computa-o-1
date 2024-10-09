@@ -48,17 +48,22 @@ def produtos4():
         quantidade = int(input("Digite a quantidade do produto: "))
         preco = float(input("Digite o preço do produto: "))
         tupla += ((produto, quantidade, preco),)
-        print (tupla)
     
   
     menos50 = ()
+    quantomenos50 = 0
     for produto, quantidade, preco in tupla:
         if quantidade < 50:
             menos50 += (produto,)
+            quantomenos50 += 1
     
-    if menos50:
-        print(f"Produtos com menos de 50 unidades: {menos50}")
+    if quantomenos50 == 1:
+      print(f"Há {quantomenos50} produto com menos de 50 unidades: {menos50}")
     
+    elif quantomenos50 > 1:
+      print(f"Há {quantomenos50} produtos com menos de 50 unidades: {menos50}")
+      
+      
     maiscaro = tupla[0]
     for i in tupla:
         if i[2] > maiscaro[2]:
@@ -66,7 +71,7 @@ def produtos4():
     
     produtomaiscaro, n, precomaiscaro = maiscaro
     
-    print(f"O produto mais caro é o {produtomaiscaro}, e ele custa {precomaiscaro:.2f} reais")
+    print(f"O produto mais caro é {produtomaiscaro}, e ele vale {precomaiscaro:.2f} reais")
     
     return tupla
 
