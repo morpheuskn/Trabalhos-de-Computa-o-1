@@ -1,0 +1,40 @@
+a=int(input("Digite o número da Agência (5 Algarismos): " ))
+
+c=int(input("Digite o número da Conta (5 Algarismos): " ))
+
+def calculaDV (v):
+    
+    r1 = v % 10
+    v = v // 10
+    
+    r2 = v % 10
+    v = v // 10
+    
+    r3 = v % 10
+    v = v // 10
+    
+    r4 = v % 10
+    v = v // 10
+    
+    r5 = v % 10
+    v = v // 10
+    
+    s=r5*6+r4*5+r3*4+r2*3+r1*2
+    
+    DV=s%7
+    
+    return DV
+
+DVa=calculaDV(a)
+
+DVc=calculaDV(c)
+
+print("Digito Verificador da Agência: %s" %DVa)
+
+print("Digito Verificador da Conta: %s" %DVc)
+
+print("Numero da Agência com o Digito Verificador: %d-%d" %(a,DVa))
+
+print("Numero da Conta com o Digito Verificador: %d-%d" %(c,DVc))
+
+            

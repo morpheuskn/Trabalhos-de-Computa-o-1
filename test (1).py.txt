@@ -1,0 +1,8 @@
+soma=0
+a=int(input(">>> "))
+b=int(input(">>> "))
+while a<=b:
+    print(a)
+    soma=soma+a
+    a=a+2
+print(soma)

@@ -1,0 +1,19 @@
+l=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+def valor(l):
+    if type(1)==int:
+        return l
+    return valor(l[0])
+
+def maior(l):
+    m=valor(l)
+    for el in l:
+        if type(el) is int:
+            c=el
+        else:
+            c=maior(el)
+        if c>m:
+            m=c
+
+    return m
+
+maior(l)

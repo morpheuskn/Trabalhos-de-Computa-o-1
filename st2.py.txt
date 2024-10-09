@@ -1,0 +1,6 @@
+a=str(input())
+
+def receve(a):
+    return a[-1::-1]
+
+print(receve(a))

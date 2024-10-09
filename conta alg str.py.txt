@@ -1,0 +1,13 @@
+x=str(input())
+y=str(input())
+def rets(x,y):
+    if x=="":
+        return 0
+    if x[0]==y:
+        return 1+(rets(x[1:],y))
+    return rets(x[1:],y)
+    
+     
+
+print(rets(x,y))
+    

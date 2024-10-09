@@ -1,0 +1,6 @@
+def remove_sub(s,sub): 
+    return s.replace(sub,"")
+
+s=str(input())
+sub=str(input())
+print(remove_sub(s,sub))

@@ -1,0 +1,50 @@
+def busca(l,chave):
+    for i, el in enumerate(l):
+        if chave == el[0]:
+            return i
+    return -1
+
+def processa_resultados():
+    lpart=list()
+    b=open("p:/resultados2.txt","r")
+    for linha in b:
+        linha=linha.strip().split(",")
+        j1=linha[0]
+        j2=linha[2]
+        sets1=int(linha[1])
+        sets2=int(linha[3])
+        pos1=busca(lpart,j1)
+        pos2=busca(lpart,j2)
+        if pos1==-1:
+             lpart.append([j1,sets1//3,sets1])
+
+        else:
+            lpart[pos1][1]+=(sets1//3)
+            lpart[pos1][2]+=sets1
+        if pos2==-1:
+             lpart.append([j2,sets2//3,sets2])
+
+        else:
+            lpart[pos2][1]+=(sets2//3)
+            lpart[pos2][2]+=sets2
+
+    b.close()
+    return lpart
+
+def imprime_vencedor(lpart):
+    indice_vencedor=0
+    indice_n=0
+    indice_v=1
+    indice_s=2
+    for in range(len(lpart[1:])):
+        if lpart[i][indice_v]>lpart[indice_vencedor][indice_v]:
+             indice_vencedor=i
+        else:
+             if lpart[i][indice_v]==lpart[indice_vencedor][indice_v]:
+                 if lpart[i][indice_s]>lpart[indice_vencedor][indice_s]:
+                    indice_vencedor=i
+                    
+                 
+
+print(processa_resultados())
+           

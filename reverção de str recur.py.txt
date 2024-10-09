@@ -1,0 +1,6 @@
+def reverte_rec(s): 
+    if len(s) == 0: 
+        return "" 
+    else: 
+        return reverte_rec(s[1:]) + s[0]
+print(reverte_rec("aeiou")) 

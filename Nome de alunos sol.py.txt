@@ -1,0 +1,21 @@
+def cria_tabela(nome):
+    arq_ent = open(nome,"r")
+    arq_nomes = open("tabela.html","w")
+    arq_nomes.write('<html><head><title>Alunos</title></head>'+'\n')
+    arq_nomes.write('<body><table border="1">'+'\n')
+    arq_nomes.write('<tr><th>Nome</th></tr>'+'\n')
+
+    lnomes=list()
+    for linha in arq_ent:
+        nome=nome.strip()
+        lnomes.append(nome)
+
+    lnomes.sort()
+    modelo = '<tr><td>NOME</td></tr>'+'\n'
+    for nome in lnomes:
+        nome = linha[:linha.find(",")]
+        arq_nomes.write(modelo.replace("NOME",nome))
+    arq_nomes.write('</table></body></html>')
+    arq_ent.close()
+    arq_nomes.close()
+    return

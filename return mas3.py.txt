@@ -1,0 +1,6 @@
+x=str(input())
+def retcarc2(x):
+    if x>="A" and x<="Z":
+        return chr(ord(x)+(ord("a")-ord("A")))
+    return x
+print(retcarc2(x))

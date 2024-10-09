@@ -1,0 +1,30 @@
+def le_arq_jog ():
+    ljog=list()
+    a=open("p:/jogadores.txt","r")
+    for linha in a:
+        jogador=linha.strip()
+        ljog.append(jogador)
+    a.close()
+    return ljog
+
+def busca(l.chave):
+    for i, el in enumerate(l):
+        if chave == el:
+            return i
+    return -1
+
+
+def processa_resultados():
+    b=open("p:/resultados.txt","r")
+    lres=list()
+    lpart=list()
+    for i in range(len(ljog)):
+        lpart.append([0,0])
+    for linha in b:
+        sets=linha.strip().split(",")
+        j1=busca(lpart,lres[0])
+        j2=busca(lpart,lres[2])
+    if ires[1]>ires[3]:
+        
+   
+        

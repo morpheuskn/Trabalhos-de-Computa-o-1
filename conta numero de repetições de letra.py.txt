@@ -1,0 +1,9 @@
+def conta(s,c):
+    ind = 0
+    vezes = 0
+    while ind < len(s):
+        if s[ind] == c:
+            vezes = vezes + 1
+        ind = ind + 1
+    return vezes
+num = conta("laura","a")

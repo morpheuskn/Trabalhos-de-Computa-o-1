@@ -1,0 +1,19 @@
+qtd_t=0
+maior=-1
+media=0
+while qtd_t<=15:
+    soma=0
+    qtd_a=1
+    while qtd_a<=25:
+        nota=float(input("Digite a nota: ")
+        media=nota
+        if nota>maior:
+            maior=nota
+            turma=qtd_t
+        qtd_a+=1
+    print("Media da Turma: %.1f" %(soma/25))
+    qtd_t+=1
+
+print("Maior nota: %.1f" %maior)
+print("Turma: %d" %turma)
+                   

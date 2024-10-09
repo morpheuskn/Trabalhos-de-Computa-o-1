@@ -1,0 +1,24 @@
+v=int(input("Digite um Valor Inteiro em Reais: "))
+
+def calc (v,n):
+    
+    a=v//n
+    print("%d Notas de %d" %(a,n))
+    
+    return v%n
+
+v=calc(v,100)
+
+v=calc(v,50)
+
+v=calc(v,20)
+
+v=calc(v,10)
+
+v=calc(v,5)
+
+v=calc(v,2)
+
+v=calc(v,1)
+
+    

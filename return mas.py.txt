@@ -1,0 +1,7 @@
+x=str(input())
+def retcarc(x):
+    if x>="a" and x<="z":
+        return x.upper()
+    if x >="A" and x <="Z":
+        return x
+print(retcarc(x))

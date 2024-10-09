@@ -1,0 +1,23 @@
+n=1
+while n<=10:
+    print (n)
+    n=n+1
+"""valor=int(input())
+cout=1
+while cout<=10:
+    print("%d X %d = %d" %(cout,valor,cout*valor))
+    cout=cout+1"""
+a=int(input())
+
+if a==1:
+    valor=1
+    while valor<=10:
+        cout=1
+        while cout <=10:
+            print("%d X %d = %d" %(cout,valor,cout*valor))
+            cout=cout+1
+            valor=valor+1
+    if cout==10 and valor==10:
+        a=int(input())
+
+    

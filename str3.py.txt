@@ -1,0 +1,16 @@
+nome=str(input())
+data=str(input())
+
+def receve(s):
+    return s[0: :2]
+
+
+def cria_senha(nome, data):
+    part1=receve(nome)
+    part2=data[0:2]
+    part3=receve(part1)
+    return part1+part2+part3
+
+print(cria_senha(nome,data))
+    
+    

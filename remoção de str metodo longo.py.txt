@@ -1,0 +1,15 @@
+def remove_sub(s,sub): 
+    nova = "" 
+    prox = 0 # proxima posição a copiar 
+    ini = 0 # início da substring
+    while ini != -1: 
+        ini = s.find(sub,prox) 
+        if ini != -1: 
+            nova = nova + s[prox:ini] 
+            prox = ini + len(sub) 
+    nova = nova + s[prox:] 
+    return nova
+
+s=str(input())
+sub=str(input())
+print(remove_sub(s,sub))

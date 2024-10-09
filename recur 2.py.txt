@@ -1,0 +1,9 @@
+x=float(input(">>> "))
+y=float(input(">>> "))
+def mult(x,y):
+    if x==0 or y==0:
+        return 0
+    else:
+        return x+mult(x,y-1)
+
+print(mult(x,y))
