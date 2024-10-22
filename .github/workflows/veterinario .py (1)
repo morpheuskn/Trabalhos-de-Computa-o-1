@@ -1,0 +1,27 @@
+def cadastro ():
+  entrada = True
+  dados = ()
+  while entrada == True:
+   cliente = input("cliente")
+   animal = input("animal")
+   especie = input("especie")
+   idade = input("idade")
+   peso = input("peso")
+   dados += ((cliente,animal,especie,idade,peso),)
+   continua = input("continua")
+   if continua == 's':
+       entrada = True
+   else:
+   	entrada = False
+  return dados
+
+
+
+def veterinario ():
+  opcao = int(input())
+  match opcao:
+    case 1:
+      cadastro ()
+    case 2:
+      print (cadastro())
+print (veterinario())
